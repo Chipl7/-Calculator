@@ -15,21 +15,28 @@ elif a3 == '**':
     print(f'{a1} ** {a2} = {a1 ** a2}')
 elif a3 == '/' and a2 != 0:
     print(f'{a1} / {a2} = {a1 / a2}')
-elif a3 == '/' and a2 == 0:
-    print('На ноль делить нельзя!')
-    a2 = int(input('Введите второе число заново: '))
-    print(f'{a1} / {a2} = {a1 / a2}')
 elif a3 == '//' and a2 != 0:
-    print(f'{a1} // {a2} = {a1 // a2}')
-elif a3 == '//' and a2 == 0:
-    print('На ноль делить нельзя!')
-    a2 = int(input('Введите второе число заново: '))
     print(f'{a1} // {a2} = {a1 // a2}')
 elif a3 == '%' and a2 != 0:
     print(f'{a1} % {a2} = {a1 % a2}')
-elif a3 == '%' and a2 == 0:
-    print('На ноль делить нельзя!')
+while a3 == '/' and a2 == 0:
+    print('\tНа ноль делить нельзя!')
     a2 = int(input('Введите второе число заново: '))
-    print(f'{a1} % {a2} = {a1 % a2}')
-else:
-    print('Я тебя не понимаю')
+    if a2 == 0:
+        print()
+    if a2 != 0:
+        print(f'{a1} / {a2} = {a1 / a2}')
+while a3 == '//' and a2 == 0:
+    print('\tНа ноль делить нельзя!')
+    a2 = int(input('Введите второе число заново: '))
+    if a2 == 0:
+        print()
+    if a2 != 0:
+        print(f'{a1} // {a2} = {a1 // a2}')
+while a3 == '%' and a2 == 0:
+    print('\tНа ноль делить нельзя!')
+    a2 = int(input('Введите второе число заново: '))
+    if a2 == 0:
+        print()
+    if a2 != 0:
+        print(f'{a1} % {a2} = {a1 % a2}')
